@@ -1,0 +1,295 @@
+body {
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+.card {
+  opacity: 0.9;
+}
+
+/* Navigation bar definitions */
+ .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em;
+ }
+ .navbar .navbar-nav .nav-item{
+  position: relative;
+ }
+
+ .navbar .navbar-nav .nav-item::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color:rgb(169, 77, 123) ;
+  width: 0;
+  margin: 0 auto;
+  height: 4px;
+  transition: all .5s;
+ }
+ .navbar .navbar-nav .nav-item:hover::after{
+  width: 100%;
+ }
+ .navbar-dark .navbar-nav .nav-link {
+  color: rgb(25, 24, 24);
+}
+
+.navbar-dark .navbar-brand {
+  color: rgb(25, 24, 24);
+}
+
+ @media screen and (min-width: 992px){
+  .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em 0;
+ }
+ .navbar .navbar-nav .nav-item{
+  margin: 0 1em;
+ }
+ }
+
+  /* Hotel custom color */
+ div .btn-hotel{
+  background-color: rgb(169, 77, 123);
+  color: #fff;
+  }
+  .btn-hotel:hover{
+  background-color: rgb(137, 127, 132);
+  color: #fff;
+  transition: 0.7s;
+  outline-color: transparent;
+  outline-style:solid;
+
+  }
+
+  div .hotel-color{
+    color: rgb(169, 77, 123);
+  }
+ div.room-price{
+    color:darkgoldenrod;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+  }
+  .vertical-rule{
+    border-left: '0.5px solid black';
+    height: '100vh'
+  }
+
+
+
+.parallax {
+  background-image: url("./assets/images/par2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.header {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-image: url("./assets/images/home2.jpg");
+  background-position: center center;
+}
+.header-title {
+  color: #fff;
+  font-size: 5rem;
+  align-content: center;
+}
+
+.parallax {
+  margin-top: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+.animated-texts h1 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.animated-texts p, h1, h2 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 60% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Header overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #000;
+  }
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    opacity: 0;
+    animation: slideUpFromBottom 1s ease-out forwards;
+  }
+  
+  @keyframes slideUpFromBottom {
+    0% {
+      transform: translate(-50%, 100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+  }
+  .hotel-logo {
+    width: 80px;   /* Set a fixed width */
+    height: 80px;  /* Set a fixed height to maintain a square aspect ratio */
+    border-radius: 50%;  /* Makes the image round */
+    object-fit: cover;
+    border-color: #a94d7b;
+    border: solid #a94d7b;
+  }
+  .hotel-text {
+    margin: 0;                    /* Remove default margin */
+    font-size: 1.5rem;            /* Adjust font size as needed */
+    color: #a94d7b;               /* Set the desired color for the text (match the logo color) */
+  }
+  
+  p {
+    margin: 0;                    /* Remove default margin */
+    font-size: 1.5rem;            /* Adjust font size as needed */
+  }
+
+/* The header banner */
+.header-banner {
+  background-image:  url("./assets/images/home1.jpg");
+   background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 80vh;
+ }
+
+.header-banner {
+  position: relative;
+  height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-banner h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-banner h1 {
+    font-size: 16px;
+  }
+}
+
+ .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 60px;
+  text-align: center;
+}
+
+
+/* Remove blue background and border from Dropdown.Toggle */
+.custom-dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the flag images */
+.language-flag {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border-radius: 3px; /* Optional: Add rounded corners */
+  border: 1px solid #4d0d0d; /* Optional: Add a border */
+}
+
+/* Style for the language text */
+.language-text {
+  font-size: 14px;
+  color: #333;
+  margin-left: 5px;
+}
+
+/* Adjust Dropdown.Item styles to match */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+
